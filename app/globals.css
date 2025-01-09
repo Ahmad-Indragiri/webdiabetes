@@ -245,6 +245,7 @@ body {
 
 /* Gaya judul */
 .text-content h1 {
+  display: flex;
   font-size: 3rem;
   font-weight: 800;
   color: #2a3d4f;
@@ -269,6 +270,7 @@ body {
   gap: 1.5rem;
   margin-top: 2rem;
   animation: fadeInHero 2.2s ease-out;
+  justify-content: center;
 }
 
 /* Gaya umum untuk tombol */
