@@ -690,7 +690,7 @@ body {
 /* Responsif untuk perangkat lebih besar dari 1024px (Laptop) */
 @media (max-width: 1024px) {
   .features-container {
-    padding-top: 150px; 
+    padding-top: 150px;
   }
 
   .features-title {
