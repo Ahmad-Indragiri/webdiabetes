@@ -7,9 +7,14 @@ import Image from 'next/image';
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
+  const toggleMenu = (e) => {
+  if (e.target.tagName === 'A') {
+    setIsMenuOpen(false);
+  } else {
     setIsMenuOpen(!isMenuOpen);
-  };
+  }
+};
+
 
   return (
     <nav className="navbar">

@@ -75,17 +75,16 @@ const Calculator = () => {
     }
 
     return (
-        <body>
-
-            <div className="calculator-container">
+        <main className="bg-gray-100 min-h-screen flex flex-col items-center py-8 px-4">
+            <div className="calculator-container w-full max-w-4xl bg-white p-6 rounded-lg shadow-lg">
                 <h1 className="text-3xl font-bold text-center mb-6">Kalkulator Resiko Diabetes</h1>
 
-                <div className="form-container">
+                <div className="form-container space-y-4">
                     <div className="form-group">
-                        <label>Usia:</label>
+                        <label className="block text-sm font-medium mb-1">Usia:</label>
                         <input
                             type="number"
-                            className="input-field"
+                            className="input-field w-full p-2 border border-gray-300 rounded-md"
                             value={age}
                             onChange={(e) => setAge(e.target.value)}
                             placeholder="Masukkan usia"
@@ -93,10 +92,10 @@ const Calculator = () => {
                     </div>
 
                     <div className="form-group">
-                        <label>Berat Badan (kg):</label>
+                        <label className="block text-sm font-medium mb-1">Berat Badan (kg):</label>
                         <input
                             type="number"
-                            className="input-field"
+                            className="input-field w-full p-2 border border-gray-300 rounded-md"
                             value={weight}
                             onChange={(e) => setWeight(e.target.value)}
                             placeholder="Masukkan berat badan"
@@ -105,11 +104,11 @@ const Calculator = () => {
                     </div>
 
                     <div className="form-group">
-                        <label>Tinggi Badan (m):</label>
+                        <label className="block text-sm font-medium mb-1">Tinggi Badan (m):</label>
                         <input
                             type="number"
                             step="0.01"
-                            className="input-field"
+                            className="input-field w-full p-2 border border-gray-300 rounded-md"
                             value={height}
                             onChange={(e) => setHeight(e.target.value)}
                             placeholder="Masukkan tinggi badan"
@@ -118,18 +117,18 @@ const Calculator = () => {
                     </div>
 
                     <div className="form-group">
-                        <label>Indeks Massa Tubuh (BMI):</label>
+                        <label className="block text-sm font-medium mb-1">Indeks Massa Tubuh (BMI):</label>
                         <input
                             type="text"
-                            className="input-field"
+                            className="input-field w-full p-2 border border-gray-300 rounded-md"
                             value={bmi || ''}
                             readOnly
                             placeholder="BMI akan dihitung otomatis"
                         />
                     </div>
 
-                    <div className="form-group">
-                        <label>Riwayat Keluarga Diabetes:</label>
+                    <div className="form-group flex items-center">
+                        <label className="text-sm font-medium mr-2">Riwayat Keluarga Diabetes:</label>
                         <input
                             type="checkbox"
                             checked={familyHistory}
@@ -138,8 +137,8 @@ const Calculator = () => {
                         <span className="ml-2">Ya</span>
                     </div>
 
-                    <div className="form-group">
-                        <label>Olahraga Teratur:</label>
+                    <div className="form-group flex items-center">
+                        <label className="text-sm font-medium mr-2">Olahraga Teratur:</label>
                         <input
                             type="checkbox"
                             checked={exercise}
@@ -148,8 +147,8 @@ const Calculator = () => {
                         <span className="ml-2">Ya</span>
                     </div>
 
-                    <div className="form-group">
-                        <label>Tekanan Darah Tinggi:</label>
+                    <div className="form-group flex items-center">
+                        <label className="text-sm font-medium mr-2">Tekanan Darah Tinggi:</label>
                         <input
                             type="checkbox"
                             checked={highBloodPressure}
@@ -158,8 +157,8 @@ const Calculator = () => {
                         <span className="ml-2">Ya</span>
                     </div>
 
-                    <div className="form-group">
-                        <label>Stres:</label>
+                    <div className="form-group flex items-center">
+                        <label className="text-sm font-medium mr-2">Stres:</label>
                         <input
                             type="checkbox"
                             checked={stress}
@@ -169,9 +168,9 @@ const Calculator = () => {
                     </div>
 
                     <div className="form-group">
-                        <label>Pola Makan:</label>
+                        <label className="block text-sm font-medium mb-1">Pola Makan:</label>
                         <select
-                            className="input-field"
+                            className="input-field w-full p-2 border border-gray-300 rounded-md"
                             value={diet}
                             onChange={(e) => setDiet(e.target.value)}
                         >
@@ -180,19 +179,23 @@ const Calculator = () => {
                         </select>
                     </div>
 
-                    <button onClick={calculateRisk} className="cta-btn">Hitung Resiko</button>
-                    <button className="cta-btn">
-                        <Link href="/feature">Kembali</Link>
-                    </button>
+                    <div className="flex space-x-4 mt-6">
+                        <button onClick={calculateRisk} className="cta-btn bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 w-full sm:w-auto">
+                            Hitung Resiko
+                        </button>
+                        <button className="cta-btn bg-gray-500 text-white py-2 px-4 rounded-md hover:bg-gray-600 w-full sm:w-auto">
+                            <Link href="/feature">Kembali</Link>
+                        </button>
+                    </div>
 
                     {risk && (
-                        <div className="result">
-                            <h2 className="text-2xl font-bold mt-4">Hasil Resiko: {risk}</h2>
+                        <div className="result mt-6">
+                            <h2 className="text-2xl font-bold">Hasil Resiko: {risk}</h2>
                         </div>
                     )}
                 </div>
             </div>
-        </body>
+        </main>
     );
 };
 

@@ -354,18 +354,6 @@ body {
   }
 }
 
-/* Bagian grafik - desain futuristik dan kedokteran (diabetes) */
-@keyframes fadeInChart {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /* Background dengan campuran biru dan hijau yang mencerminkan dunia medis */
 .chart-section {
   width: 100%;
@@ -458,44 +446,6 @@ body {
 
 /* Media query untuk responsif */
 @media (max-width: 1200px) {
-  .chart-section {
-    padding: 40px 3%;
-  }
-
-  .chart-title {
-    font-size: 2rem;
-  }
-
-  .chart-container {
-    padding: 15px;
-  }
-
-  .chart-description {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .chart-section {
-    padding: 30px 2%;
-  }
-
-  .chart-title {
-    font-size: 1.8rem;
-  }
-
-  .chart-description {
-    font-size: 1rem;
-  }
-
-  .chart-container {
-    padding: 10px;
-  }
-}
-
-
-/* Media query untuk responsif */
-@media (max-width: 1200px) {
   .hero-content {
     flex-direction: column;
     align-items: center;
@@ -527,21 +477,17 @@ body {
 
   .cta-btn,
   .cta-btn.secondary {
-    padding: 10px 20px;
+    padding: 10px 25px;
     font-size: 1rem;
+  }
+
+  .hero-container {
+    padding: 20px 5%;
   }
 
   .hero-image {
-    width: 250px;
-    height: 250px;
-  }
-
-  .chart-description {
-    font-size: 1rem;
-  }
-
-  .chart-container {
-    padding: 15px;
+    width: 220px;
+    height: 220px;
   }
 }
 
@@ -660,44 +606,6 @@ body {
   color: #1e3d58;
 }
 
-/* Animasi judul */
-@keyframes fadeInTitle {
-  0% {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Animasi deskripsi */
-@keyframes fadeInDescription {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Styling daftar fitur */
-@keyframes fadeInList {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /* Styling daftar fitur */
 .features-list {
   display: grid;
@@ -742,18 +650,6 @@ body {
 }
 
 /* Judul dalam kartu fitur */
-@keyframes fadeInCard {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Judul dalam kartu fitur */
 .feature-card h3 {
   font-size: 1.8rem;
   color: #1e3d58;
@@ -773,7 +669,6 @@ body {
   margin-bottom: 1.8rem;
 }
 
-
 /* Tombol CTA */
 .cta-btn {
   background-color: #4CAF50;
@@ -792,6 +687,7 @@ body {
   transform: scale(1.05);
 }
 
+/* Responsif untuk perangkat lebih besar dari 1024px (Laptop) */
 @media (max-width: 1024px) {
   .features-container {
     padding-top: 150px; 
@@ -811,6 +707,7 @@ body {
   }
 }
 
+/* Responsif untuk tablet (768px dan lebih kecil) */
 @media (max-width: 768px) {
   .features-container {
     padding-top: 160px; /* Mengurangi kemungkinan terhalang navbar pada perangkat lebih kecil */
@@ -844,6 +741,7 @@ body {
   }
 }
 
+/* Responsif untuk perangkat kecil (480px dan lebih kecil) */
 @media (max-width: 480px) {
   .features-container {
     padding-top: 170px; /* Menambah padding untuk ruang lebih besar */
@@ -862,14 +760,11 @@ body {
   }
 
   .cta-btn {
-    font-size: 0.95rem;
-    padding: 8px 12px;
-  }
-
-  .feature-icon {
-    font-size: 2rem;
+    font-size: 0.9rem;
+    padding: 8px 14px;
   }
 }
+
 
 
 
